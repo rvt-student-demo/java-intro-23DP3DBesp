@@ -6,32 +6,26 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Give points [0-100]:");
-        int grade = Integer.valueOf(scanner.nextLine());
-        if (grade < 0) {
-            System.out.println("impossible!");
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Value of the gift?");
+        int giftval = Integer.valueOf(reader.nextLine());
+        if (giftval >= 1000000) {
+            System.out.println("Tax:"+ (142100+(giftval-1000000)*0.17));
         }
-        else if (grade <=49) {
-            System.out.println("Grade: failed");
+        else if (giftval >= 200000 && giftval < 1000000) {
+            System.out.println("Tax:"+ (22100+(giftval-200000)*0.15));
         }
-        else if (grade <=59) {
-            System.out.println("Grade: 1");
+        else if (giftval >= 55000 && giftval < 200000) {
+            System.out.println("Tax:"+ (4700+(giftval-55000)*0.12));
         }
-        else if (grade <=69) {
-            System.out.println("Grade: 2");
+        else if (giftval >= 25000 && giftval < 55000) {
+            System.out.println("Tax:"+ (1700+(giftval-25000)*0.1));
         }
-        else if (grade <=79) {
-            System.out.println("Grade: 3");
-        }
-        else if (grade <=89) {
-            System.out.println("Grade: 4");
-        }
-        else if (grade <=100) {
-            System.out.println("Grade: 5");
+        else if (giftval >= 5000 && giftval < 25000) {
+            System.out.println("Tax:"+ (100+(giftval-5000)*0.08));
         }
         else {
-            System.out.println("Grade: incredible!");
+            System.out.println("No tax!");
         }
     }
 
