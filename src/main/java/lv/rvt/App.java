@@ -8,9 +8,11 @@ public class App
     {
         Scanner reader = new Scanner(System.in);
         int number =  Integer.valueOf(reader.nextLine());
-        for (int i = 0; i < number+1; i++) {
-            System.out.println(i);
+        int result = 0;
+        for (int i = 0; i <= number; i++) {
+            result=result + i;
         }
+        System.out.println(result);
     }
 
 }
