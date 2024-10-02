@@ -30,7 +30,7 @@ public class App
         }
         System.out.println("Summa: "+sum);
         System.out.println("Numbers: "+cipari);
-        System.out.println("Average: "+ (sum/cipari));
+        System.out.println("Average: "+ (double)sum/cipari);
         System.out.println("Even: "+ even);
         System.out.println("Odd: "+ odd);
 
