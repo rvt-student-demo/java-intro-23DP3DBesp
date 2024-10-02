@@ -7,12 +7,33 @@ public class App
     public static void main( String[] args )
     {
         Scanner reader = new Scanner(System.in);
-        int number =  Integer.valueOf(reader.nextLine());
-        int result = 0;
-        for (int i = 0; i <= number; i++) {
-            result=result + i;
+        System.out.println("Give numbers:");
+        int sum = 0;
+        int cipari = 0;
+        int even = 0;
+        int odd = 0;
+
+        while (true) {
+            int numbers = Integer.valueOf(reader.nextLine());
+            if (numbers == -1){
+                System.out.println("Thx! Bye!");
+                break;
+            }
+        sum += numbers;
+        cipari++;
+        if (numbers % 2 == 0){
+            even++;
         }
-        System.out.println(result);
+        else {
+            odd++;
+        }
+        }
+        System.out.println("Summa: "+sum);
+        System.out.println("Numbers: "+cipari);
+        System.out.println("Average: "+ (sum/cipari));
+        System.out.println("Even: "+ even);
+        System.out.println("Odd: "+ odd);
+
     }
 
 }
