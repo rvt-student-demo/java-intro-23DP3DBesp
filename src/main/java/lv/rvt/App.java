@@ -6,16 +6,19 @@ public class App
 {
     public static void main( String[] args )
     {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("How many times: ");
+    Scanner reader = new Scanner(System.in);
+    int beginning = Integer.valueOf(reader.nextLine());
+    int end = Integer.valueOf(reader.nextLine());
 
-    int number = Integer.valueOf(scanner.nextLine());
-    for(int i = 1; i<= number;i++){
-        reprint();
+    divisibleByThreeInRange(beginning, end);
     }
-
-    }
-    public static void reprint(){
-        System.out.println("In a hole in the ground there lived a method");
+    public static void divisibleByThreeInRange(int beginning, int end)
+    {
+        for (int i = beginning; i<=end;i++)
+        {
+            if (i % 3 ==0){
+                System.out.println(i);
+            }
+        }
     }
 }
