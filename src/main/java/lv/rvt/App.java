@@ -6,34 +6,16 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Give numbers:");
-        int sum = 0;
-        int cipari = 0;
-        int even = 0;
-        int odd = 0;
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("How many times: ");
 
-        while (true) {
-            int numbers = Integer.valueOf(reader.nextLine());
-            if (numbers == -1){
-                System.out.println("Thx! Bye!");
-                break;
-            }
-        sum += numbers;
-        cipari++;
-        if (numbers % 2 == 0){
-            even++;
-        }
-        else {
-            odd++;
-        }
-        }
-        System.out.println("Summa: "+sum);
-        System.out.println("Numbers: "+cipari);
-        System.out.println("Average: "+ (double)sum/cipari);
-        System.out.println("Even: "+ even);
-        System.out.println("Odd: "+ odd);
-
+    int number = Integer.valueOf(scanner.nextLine());
+    for(int i = 1; i<= number;i++){
+        reprint();
     }
 
+    }
+    public static void reprint(){
+        System.out.println("In a hole in the ground there lived a method");
+    }
 }
