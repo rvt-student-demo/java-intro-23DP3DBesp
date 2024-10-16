@@ -11,7 +11,8 @@ public class App
         // printStars(9);
         // printSquare(4);
         // printRectangle(3, 17);
-        // printTriangle(5);
+        // printTriangle(4);
+        christmasTree(5);
     }
     public static void printStars(int number)
     // Part 1
@@ -53,6 +54,35 @@ public class App
                 System.out.print("*");
             }
             System.out.println();
+        }
+        
+    }
+    public static void printSpaces(int number)
+    {
+        for (int i = 0; i <= number; i++)
+        {
+            System.out.print(" ");
+        }
+    }
+    public static void printRightTriangle(int size)
+    {
+        for (int i = 0; i <= size; i++)
+        {
+            printSpaces(size-i);
+            printStars(i);
+        }
+    }
+    public static void christmasTree(int height)
+    {
+        for (int i = 0; i <= height; i++)
+        {
+            printSpaces(height-1);
+            printStars(i+(i-1));
+        }
+        for (int i = 0; i < 2; i ++)
+        {
+            printSpaces(height-2);
+            printStars(3);
         }
     }
     
