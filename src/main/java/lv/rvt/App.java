@@ -6,87 +6,23 @@ public class App
 {
     public static void main( String[] args )
     {
-        // printStars(5);
-        // printStars(3);
-        // printStars(9);
-        // printSquare(4);
-        // printRectangle(3, 17);
-        // printTriangle(5);
-        // printTriangle(4);
-        christmasTree(5);
-    }
-    public static void printStars(int number)
-    // Part 1
-    {
-        for (int i = 1; i <= number; i++)
+        Scanner reader = new Scanner(System.in);
+        int varduskaits = 0;
+        int yearsum = 0;
+        while (true)
         {
-            System.out.print("*");
-        }
-        System.out.println("");
-    }
-
-    public static void printSquare(int size)
-    // Part 2
-    {
-        for (int i = 1; i<=size; i++){
-            for (int j = 1; j<=size; j++){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
-    public static void printRectangle(int wide, int height)
-    // Part 3
-    {
-        for (int i = 1; i<=wide; i++){
-            for (int j = 1; j<=height; j++){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
-    public static void printTriangle(int traingleheight)
-    // Part 4
-    {
-        for (int i = 1; i<= traingleheight; i++)
-        {
-            for (int j = 1; j <= i; j++)
+            String input = reader.nextLine();
+            if (input.equals(" "))
             {
-                System.out.print("*");
+                break;
             }
-            System.out.println();
-        }
-        
-    }
-    public static void printSpaces(int number)
-    {
-        for (int i = 0; i <= number; i++)
-        {
-            System.out.print(" ");
-        }
-    }
-    public static void printRightTriangle(int size)
-    {
-        for (int i = 0; i <= size; i++)
-        {
-            printSpaces(size-i);
-            printStars(i);
-        }
-    }
-    public static void christmasTree(int height)
-    {
-        for (int i = 0; i <= height; i++)
-        {
-            printSpaces(height-i);
-            printStars(i*2+1);
-            System.out.print("");
-        }
-        for (int i = 0; i < 2; i++)
-        {
-            printSpaces(height-1);
-            printStars(3);
-            System.out.print("");
-        }
-    }
+            varduskaits++;
 
+            String pieces[] = input.split(",");
+            yearsum += Integer.valueOf(pieces[1]);
+            System.out.println("Longest name");
+            System.out.println("Average of the birth years: "+ (yearsum/varduskaits) + "." + (2024/(yearsum/varduskaits)));
+
+        }
+    }
 }
