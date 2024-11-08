@@ -6,20 +6,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        Account matthewsAccount = new Account("Arto's account", 1000.00);
-        Account mySwissAccount = new Account("Arto's account in Switzerland", 0);
-        
-        System.out.println("Initial state");
-        System.out.println(matthewsAccount);
-        System.out.println(mySwissAccount);
-        
-        matthewsAccount.withdraw(100);
-        System.out.println("The balance of Matthew's account is now: " + matthewsAccount.balance());
-        mySwissAccount.deposit(100);
-        System.out.println("The balance of my other account is now: " + mySwissAccount.balance());
-        
-        System.out.println("End state");
-        System.out.println(matthewsAccount);
-        System.out.println(mySwissAccount);
+        Product product1 = new Product("Banana",1.1,13);
+        Product product2 = new Product("Apple",0.7,21);
+        Product product3 = new Product("Banana",0.3,44);
+
+        product1.printProduct();
+        product2.printProduct();
+        product3.printProduct();
+
     }
+    
 }
