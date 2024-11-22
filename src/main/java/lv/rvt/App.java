@@ -1,33 +1,39 @@
 package lv.rvt;
-
+import java.util.*;
+import java.lang.reflect.Array;
 public class App 
 {
 
-    public static void main( String[] args )
+    public static void main( String[] args ){
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Books> books = new ArrayList<>();
+        while (true) {
+            System.out.println("Title: ");
+            String title = scanner.nextLine();
 
-    {
-        PaymentCard paulcard = new PaymentCard(20);
-        PaymentCard mattcard = new PaymentCard(30);
-        
-        paulcard.eatHeartily();
-        mattcard.eatAffordably();
-    
-        System.out.println("Paul: The card has a balance of " + paulcard);
-        System.out.println("Matt: The card has a balance of " + mattcard);
+            if (title.isEmpty()) {
+                break;
+            }
 
-        paulcard.addMoney(20.0);
-        mattcard.eatHeartily();
-    
-        System.out.println("Paul: The card has a balance of " + paulcard);
-        System.out.println("Matt: The card has a balance of " + mattcard);
+            System.out.println("Pages: ");
+            int pages = Integer.valueOf(scanner.nextLine());
 
-        paulcard.eatAffordably();
-        paulcard.eatAffordably();
+            System.out.println("Publication year");
+            int year = Integer.valueOf(scanner.nextLine());
 
-        mattcard.addMoney(50.0);
-    
-        System.out.println("Paul: The card has a balance of " + paulcard);
-        System.out.println("Matt: The card has a balance of " + mattcard);
+            books.add(new Books(title, pages, year));
+        }
+
+        System.out.println("What information will be printed? ");
+        String information = scanner.nextLine();
+
+        for (Books book : books) {
+            if (information.equals("Everything")) {
+                System.out.println(book);
+            } else if (information.equals("name")) {
+                System.out.println(book.getTitle());
+            } 
+        }
     }
 
 
