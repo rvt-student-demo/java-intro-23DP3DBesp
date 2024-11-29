@@ -1,20 +1,16 @@
 package lv.rvt;
-import java.util.*;
-import java.lang.reflect.Array;
-public class App 
-{
 
-    public static void main( String[] args ){
-        Timer timer = new Timer();
-        while (true) {
-            System.out.println(timer);
-            timer.advance();
+import java.util.ArrayList;
+import java.util.Scanner;
 
-            try {
-                Thread.sleep(10);
-            } catch (Exception e) {
-                
-            }
-        }
+public class App {
+    public static void main(String[] args) {
+        Product tapeMeasure = new Product("Tape measure");
+        Product plaster = new Product("Plaster", "home improvement section");
+        Product tyre = new Product("Tyre", 5);
+            
+        System.out.println(tapeMeasure);
+        System.out.println(plaster);
+        System.out.println(tyre);
     }
 }
