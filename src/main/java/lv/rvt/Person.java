@@ -1,32 +1,19 @@
-// package lv.rvt;
+package lv.rvt;
 
-// public class Person 
-// {
-//     private String name;
-//     private int age;
-//     private int weight;
-//     private int height;
+public class Person {
 
-//     public Person(String initialName) {
-//         this.age = 0;
-//         this.weight = 0;
-//         this.height = 0;
-//         this.name = initialName;
-//     }
+    private String name;
+    private String adres;
 
-//     public void setName(String newName){
-//         this.name = newName;
-//     }
-//     public void setHeight(int newHeight) {
-//         this.height = newHeight;
-//     }
+    public Person(String name, String adres) {
+        this.name = name;
+        this.adres = adres;
+    }
 
-//     public void setWeight(int newWeight) {
-//         this.weight = newWeight;
-//     }
+    @Override
+    public String toString() {
+        return name + "\n   " + adres;
 
-//     public double bodyMassIndex() {
-//         double heigthPerHundred = this.height / 100.0;
-//         return this.weight / (heigthPerHundred * heigthPerHundred);
-//     }
-// }
+    }
+
+}
