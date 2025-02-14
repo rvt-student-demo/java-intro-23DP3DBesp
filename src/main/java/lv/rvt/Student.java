@@ -4,8 +4,8 @@ public class Student extends Person {
     private int credit = 0;
 
 
-    public Student(String name, String adres){
-        super(name, adres);
+    public Student(String name, String address){
+        super(name, address);
 
 }   @Override
     public String toString(){

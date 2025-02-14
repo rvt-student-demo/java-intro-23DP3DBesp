@@ -3,7 +3,7 @@ package lv.rvt;
 public class Teacher extends Person {
     private int salary;
     public Teacher(String name, String adres, int salary){
-        super(name, adres);
+        super(name, address);
         this.salary = salary;
 
 
