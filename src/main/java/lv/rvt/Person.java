@@ -3,21 +3,17 @@ package lv.rvt;
 public class Person {
 
     private String name;
+    private int age;
     private String address;
-    private int weight;
-    private int height;
 
-    public Person(String name, String address, int weight, int height) {
+    public Person(String name, int age, String address) {
         this.name = name;
+        this.age = age;
         this.address = address;
-        this.weight = weight;
-        this.height = height;
     }
 
     @Override
     public String toString() {
-        return name + "\n   " + address + weight + height;
-
+        return "Name: " + name + "\nAddress: " + address + "\nAge: " + age;
     }
-
 }

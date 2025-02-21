@@ -1,2 +1,4 @@
-name,age,weight,height, adress
-Anatoliy, 52, 140, 206, NY
+name, age, address
+Anatoliy, 52, NY
+Volodka, 75, Russia
+Trump, 18, USA
