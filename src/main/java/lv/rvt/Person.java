@@ -6,14 +6,28 @@ public class Person {
     private int age;
     private String address;
 
-    public Person(String name, int age, String address) {
+    public Person(String name, String address, int age) {
         this.name = name;
-        this.age = age;
         this.address = address;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+    
+    public String getAdres() {
+        return address;
     }
 
     @Override
     public String toString() {
-        return "Name: " + name + "\nAddress: " + address + "\nAge: " + age;
+        return name + "\n   " + address;
+
     }
+    
 }
